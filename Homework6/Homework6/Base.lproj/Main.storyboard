@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QZ3-gu-gpF">
+                                <rect key="frame" x="108.5" y="104" width="197" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControllerDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nt4-xQ-kDF"/>
+                                </connections>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3a-72-5IC">
+                                <rect key="frame" x="182.5" y="275" width="51" height="31"/>
+                                <connections>
+                                    <action selector="selectionSwitchDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="JWU-Lp-UXA"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbt-tw-Eyh">
+                                <rect key="frame" x="176" y="677" width="62" height="30"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="kcC-93-JPa" kind="presentation" id="jdl-GY-F4c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0L-qu-HGi">
+                                <rect key="frame" x="170.5" y="407" width="73" height="30"/>
+                                <state key="normal" title="Select Me!"/>
+                                <state key="selected" title="Selected"/>
+                                <connections>
+                                    <action selector="selectionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wsr-zo-cx0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cbt-tw-Eyh" secondAttribute="bottom" constant="155" id="0zK-Wx-EyC"/>
+                            <constraint firstItem="QZ3-gu-gpF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="71k-03-Ydz"/>
+                            <constraint firstItem="L3a-72-5IC" firstAttribute="top" secondItem="QZ3-gu-gpF" secondAttribute="bottom" constant="140" id="Ceo-Bm-axL"/>
+                            <constraint firstItem="u0L-qu-HGi" firstAttribute="top" secondItem="L3a-72-5IC" secondAttribute="bottom" constant="101" id="FaH-Ty-nB3"/>
+                            <constraint firstItem="QZ3-gu-gpF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SM5-rZ-mmD"/>
+                            <constraint firstItem="Cbt-tw-Eyh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Uo8-sP-lVg"/>
+                            <constraint firstItem="L3a-72-5IC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hTd-fv-K0Z"/>
+                            <constraint firstItem="u0L-qu-HGi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lVl-JJ-efr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="Cbt-tw-Eyh" id="AWM-za-Qe5"/>
+                        <outlet property="segmentedController" destination="QZ3-gu-gpF" id="c6m-EF-dUm"/>
+                        <outlet property="selectionButton" destination="u0L-qu-HGi" id="r8R-Lv-QKs"/>
+                        <outlet property="selectionSwitch" destination="L3a-72-5IC" id="xuc-Ko-VhY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fRU-m8-mHm">
+            <objects>
+                <viewController id="kcC-93-JPa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Js2-F8-crz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Achieved!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJE-3d-w9U">
+                                <rect key="frame" x="141" y="121" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ea0-wc-O3l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGb-CC-7Fq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="127"/>
+        </scene>
+    </scenes>
+</document>
